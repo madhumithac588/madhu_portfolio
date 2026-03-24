@@ -165,8 +165,8 @@ function AlertBadge({ text, type = "info" }) {
 export default function MadhumithaPortfolio() {
   const [activeNav, setActiveNav] = useState("home");
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [consoleLines, setConsoleLines] = useState([]);
-  const consoleRef = useRef(null);
+  const [consoleLines, setConsoleLines] = useState<string[]>([]);
+  const consoleRef = useRef<HTMLDivElement | null>(null);
 
   const bootLines = [
     "> Initializing security protocol...",
