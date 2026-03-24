@@ -71,7 +71,7 @@ function TypingEffect() {
   );
 }
 
-function GlitchText({ children }) {
+function GlitchText({ children }: { children: React.ReactNode }) {
   return (
     <span className="relative inline-block group">
       <span className="relative z-10">{children}</span>
