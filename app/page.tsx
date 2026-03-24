@@ -444,7 +444,7 @@ export default function MadhumithaPortfolio() {
           <div className="section-fade grid grid-cols-2 gap-4">
             {[
               { label: "CGPA", value: "8.9", sub: "B.Tech CSE", icon: <Cpu className="w-5 h-5" />, color: "#00ff88" },
-              { label: "Internship", value: "4mo", sub: "Splunk Trainee @ POSITKA", icon: <Server className="w-5 h-5" />, color: "#22d3ee" },
+              { label: "Internship", value: "3mo", sub: "Splunk Trainee @ POSITKA", icon: <Server className="w-5 h-5" />, color: "#22d3ee" },
               { label: "Certifications", value: "7+", sub: "Cisco · Coursera · More", icon: <Shield className="w-5 h-5" />, color: "#a78bfa" },
               { label: "Paper Award", value: "1st", sub: "Rajiv Gandhi Eng. College", icon: <AlertTriangle className="w-5 h-5" />, color: "#f59e0b" },
             ].map((stat, i) => (
