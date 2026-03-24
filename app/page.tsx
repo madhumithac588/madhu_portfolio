@@ -124,8 +124,17 @@ function HexGrid() {
   );
 }
 
-function ThreatMeter({ label, level, color }) {
+function ThreatMeter({
+  label,
+  level,
+  color,
+}: {
+  label: string;
+  level: number;
+  color: string;
+}) {
   const [animated, setAnimated] = useState(0);
+
   useEffect(() => {
     const t = setTimeout(() => setAnimated(level), 600);
     return () => clearTimeout(t);
@@ -134,13 +143,20 @@ function ThreatMeter({ label, level, color }) {
   return (
     <div className="mb-4">
       <div className="flex justify-between mb-1">
-        <span className="text-xs font-mono text-gray-400 uppercase tracking-widest">{label}</span>
-        <span className="text-xs font-mono" style={{ color }}>{level}%</span>
+        <span className="text-xs font-mono text-gray-400 uppercase tracking-widest">
+          {label}
+        </span>
+        <span className="text-xs font-mono" style={{ color }}>
+          {level}%
+        </span>
       </div>
       <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">
         <div
           className="h-full rounded-full transition-all duration-1000 ease-out"
-          style={{ width: `${animated}%`, background: `linear-gradient(90deg, ${color}88, ${color})` }}
+          style={{
+            width: `${animated}%`,
+            background: `linear-gradient(90deg, ${color}88, ${color})`,
+          }}
         />
       </div>
     </div>
